@@ -1,0 +1,11 @@
+[service]
+name = "elasticsearch"
+
+[build]
+dockerfile = "Dockerfile"
+
+[env]
+ELASTICSEARCH_HOST = "http://0.0.0.0:9200"
+ES_JAVA_OPTS = "-Xms512m -Xmx512m"
+discovery.type = "single-node"
+xpack.security.enabled = "false" 
